@@ -30,10 +30,10 @@ jobs:
                   node-version: '14'
 
             - name: Install dependencies
-              run: npm install
+              run: npm install -g bun && bun install
 
             - name: Build
-              run: npm run build
+              run: bun build
 
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v3
